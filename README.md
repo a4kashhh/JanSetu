@@ -63,3 +63,8 @@ Navigating government welfare portals is notoriously complex, highly fragmented,
 ## Features
 - AI Scheme Matching
 - Secure Authentication
+
+## Getting Started
+1. Clone repo
+2. npm install
+3. npm run dev
