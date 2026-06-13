@@ -1,32 +1,33 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
+import { Inter_Tight } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import { Suspense } from "react"
-import { Inter_Tight, JetBrains_Mono, Outfit } from "next/font/google"
 import "./globals.css"
 
-const instrumentSans = Inter_Tight({
-  variable: "--font-sans",
+const interTight = Inter_Tight({
   subsets: ["latin"],
-})
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-})
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-  weight: ["800", "900"],
+  variable: "--font-inter-tight",
 })
 
 export const metadata: Metadata = {
-  title: "JanSetu AI",
-  description: "AI-powered scheme discovery for Indian citizens",
-  generator: "v0.app",
+  title: "JanSetu AI | India's AI Scheme Recommender",
+  description: "Find government schemes you qualify for in under 2 minutes. JanSetu AI uses Machine Learning to match you with 100+ welfare programs.",
+  keywords: ["government schemes", "welfare benefits", "PM-KISAN", "Ayushman Bharat", "India", "AI"],
+  authors: [{ name: "JanSetu AI" }],
+  openGraph: {
+    title: "JanSetu AI | India's AI Scheme Recommender",
+    description: "Find government schemes you qualify for in under 2 minutes.",
+    type: "website",
+  },
 }
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+  width: "device-width",
+  initialScale: 1,
+}
+
+import { AuthProvider } from "@/lib/contexts/AuthContext"
 
 export default function RootLayout({
   children,
@@ -35,12 +36,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
-      </head>
-      <body className={`font-sans ${instrumentSans.variable} ${jetbrainsMono.variable} ${outfit.variable}`}>
-        <Suspense fallback={null}>{children}</Suspense>
-        <Analytics />
+      <body className={`${interTight.className} font-sans antialiased`}>
+        <AuthProvider>
+          {children}
+          <Analytics />
+        </AuthProvider>
       </body>
     </html>
   )
