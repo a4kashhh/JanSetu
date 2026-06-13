@@ -59,3 +59,7 @@ python3 scripts/parse_local_dataset.py
 
 ## 🎯 The Vision
 Navigating government welfare portals is notoriously complex, highly fragmented, and buried in bureaucratic jargon. **JanSetu AI** solves this by demanding zero research from the user. You just provide your basic parameters, and our Neural Network instantly bridges the gap to the exact financial benefits you deserve. 
+
+## Features
+- AI Scheme Matching
+- Secure Authentication
