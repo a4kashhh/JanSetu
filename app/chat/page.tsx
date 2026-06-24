@@ -237,8 +237,8 @@ export default function WizardPage() {
       <h2 className="text-3xl font-bold text-slate-900 tracking-tight mb-3">State of Residence</h2>
       <p className="text-slate-600 text-lg mb-10">Where do you currently live?</p>
       
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-        {["Chhattisgarh", "Maharashtra", "Karnataka", "Delhi", "Gujarat", "Punjab", "Haryana", "Uttar Pradesh", "Bihar", "Rajasthan", "Tamil Nadu", "Kerala"].map((s) => (
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-h-[50vh] overflow-y-auto p-2">
+        {["Andaman and Nicobar Islands", "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chandigarh", "Chhattisgarh", "Dadra and Nagar Haveli and Daman and Diu", "Delhi", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jammu and Kashmir", "Jharkhand", "Karnataka", "Kerala", "Ladakh", "Lakshadweep", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Puducherry", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal"].map((s) => (
           <motion.button
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
