@@ -2,18 +2,7 @@
 
 import { SectionTitle } from "@/components/ui/section-title"
 
-const techStack = [
-  "GraphSAGE ML",
-  "Knowledge Graph",
-  "PyTorch",
-  "FastAPI",
-  "Next.js 15",
-  "Explainable AI",
-  "NLP Matching",
-  "100+ Schemes",
-  "Vercel Edge",
-]
-
+// Removed techStack array as per user request
 const stats = [
   { value: "₹2L Cr", label: "Unclaimed Benefits Yearly" },
   { value: "100+", label: "Government Schemes" },
@@ -38,20 +27,7 @@ export function About() {
           </div>
 
           <div>
-            <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Technology</h3>
-              <div className="flex flex-wrap gap-2">
-                {techStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-4 py-2 text-sm font-medium border border-border rounded-full hover:bg-secondary transition-colors cursor-default"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-
+            {/* Technology section removed for simplicity */}
             <div className="grid grid-cols-3 gap-4 mt-12">
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center p-4 bg-secondary rounded-2xl">
