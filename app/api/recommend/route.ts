@@ -5,7 +5,7 @@ export async function POST(req: Request) {
     const payload = await req.json();
 
     // Proxy the request to the PyTorch FastAPI Microservice
-    const backendUrl = process.env.BACKEND_URL || "http://127.0.0.1:8001/predict";
+    const backendUrl = process.env.BACKEND_URL || "http://127.0.0.1:8000/predict";
     const response = await fetch(backendUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
