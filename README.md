@@ -44,7 +44,7 @@ pip install fastapi uvicorn pydantic pandas
 cd ai_engine
 uvicorn main:app --reload --port 8001
 ```
-The API will listen on http://127.0.0.1:8001
+The API will be listening on http://127.0.0.1:8001 
 
 ---
 
