@@ -5,7 +5,7 @@ export async function POST(req: Request) {
     const payload = await req.json();
 
     // Proxy the request to the PyTorch FastAPI Microservice
-    const backendUrl = process.env.BACKEND_URL || "http://127.0.0.1:8000/predict";
+    const backendUrl = process.env.BACKEND_URL || "http://127.0.0.1:8001/predict";
     const response = await fetch(backendUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -22,7 +22,7 @@ export async function POST(req: Request) {
   } catch (error) {
     console.error("Recommend API Error:", error);
     return NextResponse.json(
-      { error: "Failed to connect to PyTorch AI Engine. Ensure uvicorn is running on port 8000." },
+      { error: "Failed to connect to PyTorch AI Engine. Ensure uvicorn is running on port 8001." },
       { status: 500 }
     );
   }
