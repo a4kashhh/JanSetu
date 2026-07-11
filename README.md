@@ -10,7 +10,7 @@ Built for the Samsung Solve for Tomorrow competition, this platform leverages an
 
 ---
 
-## Key Features
+## Key Features:
 
 - AI Match Engine: A custom Python/FastAPI microservice that calculates probabilistic match scores based on dynamic user demographics.
 - High-Performance Frontend: Built with Next.js, React, Tailwind CSS, and Framer Motion for a scalable, mobile-first User Interface.
