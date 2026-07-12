@@ -22,7 +22,7 @@ Built for the Samsung Solve for Tomorrow competition, this platform leverages an
 
 ## Architecture
 
-The project utilizes a highly scalable microservice architecture:
+The project utilizes a highly scalable microservice architectures:
 
 1. Core Web Application (Next.js): Handles the frontend UI, user state management, and the frictionless adaptive flow.
 2. AI Eligibility Engine (Python / FastAPI): A dedicated backend microservice that mathematically evaluates user demographics against thousands of strict scheme rulebooks to score and rank eligibility.
