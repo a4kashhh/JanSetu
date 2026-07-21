@@ -1,4 +1,4 @@
-# JanSetu AI
+# JanSetu
 
 ![JanSetu Banner](https://img.shields.io/badge/Powered_by-PyTorch_Deep_Learning-emerald?style=for-the-badge&logo=pytorch)
 ![Next.js](https://img.shields.io/badge/Frontend-Next.js_14-black?style=for-the-badge&logo=next.js)
